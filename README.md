@@ -709,14 +709,3 @@ Le service cron tourne en permanence, alors que chaque tâche ne s'exécute que 
 - **Aucun secret dans le dépôt GitHub** : mot de passe d'application Gmail, mots de passe MariaDB, mot de passe sudo et adresse du webhook ne doivent jamais être commités. Un secret poussé une fois reste visible dans l'historique Git, même après sa suppression : il faut alors le changer.
 
 ---
-
-## Pistes d'amélioration
-
-- Lire le mot de passe MariaDB (`clientpass`) dans une variable d'environnement, comme `PSSWD_PSMM`, au lieu de l'écrire dans les scripts.
-- Remplacer, dans les Jobs 12 et 15, les conditions de test sur les seuils par la comparaison des mesures réelles (par exemple `preRam > threshRAM`).
-- Utiliser un chemin absolu pour `lastSent.txt` dans les deux scripts qui le lisent et l'écrivent, pour un fonctionnement correct sous cron.
-- Dans le Job 15, ne publier dans Google Chat que s'il y a des alertes, et appliquer la limite d'un message par heure.
-- Faire la sauvegarde du Job 10 avec `mysqldump`, qui produit un fichier `.sql` restaurable directement dans MariaDB.
-- Utiliser des colonnes `DATETIME` et `FLOAT` plutôt que `VARCHAR` pour les dates et les pourcentages.
-- Compléter la connexion et la déconnexion automatiques à ALCASAR dans le Job 14.
-- Envoyer `apt-get upgrade` avec `DEBIAN_FRONTEND=noninteractive`, pour éviter qu'un écran de configuration bloque la mise à jour.

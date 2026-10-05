@@ -7,21 +7,27 @@ import datetime
 import time
 import shlex
 
+# Job 10 : sauvegarde locale et horodatée de la table logsTable, avec
+# conservation des 7 dernières sauvegardes. Lancé par cron toutes les 3h.
+# Utilisation : python3 ssh_cron_backup.py <ip_du_serveur_mariadb>
 
 
-# argv[0] nom du script
+# Adresse IP du serveur passée en argument (sys.argv[0] contient le nom du script)
 hostname = sys.argv[1]
 username = "monitor"
 key_filename="/home/client/.ssh/id_rsa"
+
+# Connexion SSH avec la clé privée du compte monitor
 client = paramiko.client.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 client.connect(hostname, username=username, key_filename=key_filename)
-#pour rentrer le mot de passe en interactif
 
+# Date et heure de la sauvegarde, utilisées dans le nom du fichier
 dateHour=datetime.datetime.today().strftime('%Y-%m-%d_%H-%M-%S')
 
 print(dateHour)
 
+# Connexion à la base MariaDB
 connection = pymysql.connect(
     host=hostname,
     user="client",
@@ -31,49 +37,54 @@ connection = pymysql.connect(
 )
 
 with connection:
-#connection.commit()
     with connection.cursor() as cursor:
-        # Creation de la base si non présente
+        # Sélection de la base PSMM
         sql = "USE PSMM; "
         cursor.execute(sql)
-        # ajout des données pour chaque lignes trouvées
-         #On enlève le : pour que le l'heure et supprimer la  virgule
-        # print("Ajout de "+acc_name)
+
+        # Récupération de toutes les lignes de la table logsTable
         sql = """SELECT * FROM logsTable;"""
         cursor.execute(sql)
         listLogs=cursor.fetchall() 
-        #print(type(listLogs))
 
 
+# Contenu de la sauvegarde : une ligne de la table par ligne de texte
 backupFormated="\n".join(str(log) for log in listLogs)
 
+# Dossier des sauvegardes (chemin absolu, car cron ne lance pas le script depuis ce dossier)
 dir = "/home/client/scriptsPSMM/backup"
 
 
+# --- Rotation : s'il y a déjà 7 sauvegardes, on supprime la plus ancienne ---
+
 numFiles=len(os.listdir(dir))
 
+# Point de départ : l'heure actuelle, forcément plus récente que tous les fichiers
 minDateCreation=time.time()
 
 
 if numFiles == 7:
     for path in os.listdir(dir):
+     # Chemin complet du fichier (dossier + nom)
      myPath=os.path.join(dir, path)
-#Concatene pour savoir si le fichier dans le dossier est bien un fichier et pas un dossier
+     # On ignore les éventuels sous-dossiers
      if os.path.isfile(myPath):
-#On regarde  quelle sont les dates de production les plus anciennes
+         # On garde le fichier dont la date de modification est la plus ancienne
          if os.path.getmtime(myPath)<minDateCreation:   
              minDateCreation=os.path.getmtime(myPath)
              minName=myPath
+    # Suppression de la sauvegarde la plus ancienne
     res = subprocess.run(f'rm '+minName, shell=True)
 
 
+# --- Création de la nouvelle sauvegarde ---
 
-#print(os.path.basename(path))
- #       print(datecreation)
 message=backupFormated
 
 file_name =dir+'/backup_'+dateHour+".txt"
 
+# Écriture du contenu dans le fichier ; shlex.quote protège les apostrophes
+# et caractères spéciaux pour le shell
 res = subprocess.run(f'echo {shlex.quote(message)} >> {shlex.quote(file_name)}', shell=True)
 
 

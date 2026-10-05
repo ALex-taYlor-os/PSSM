@@ -3,10 +3,15 @@ import sys
 import os
 import pymysql
 
-#argv[0] nom du script
+# Job 05 : vérifier l'accès au serveur MariaDB/MySQL.
+# Utilisation : python3 ssh_mysql.py <ip_du_serveur_mariadb>
+
+# Adresse IP du serveur passée en argument (sys.argv[0] contient le nom du script)
 hostname = sys.argv[1]
 username = "monitor"
 key_filename="/home/client/.ssh/id_rsa"
+
+# Connexion SSH au serveur ; le script s'arrête si elle échoue
 try:
      client = paramiko.client.SSHClient()
      client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -16,13 +21,12 @@ except:
      sys.exit(1)
 
 
-#pour rentrer le mot de passe en interactif
+     # Affichage de l'utilisateur connecté et des adresses IP du serveur
      _stdin, _stdout,_stderr = client.exec_command("whoami && ip a ", get_pty=True)
-#utilisation de la variable d'environnement avec le mot de passe sudo pour les vm 
-#_stdin.write(os.environ["PSSWD_PSMM"])
      _stdin.flush()
      print(_stdout.read().decode())
 
+# Connexion à la base MariaDB ; le script s'arrête si elle échoue
 try:
    connection = pymysql.connect(
         host=hostname,

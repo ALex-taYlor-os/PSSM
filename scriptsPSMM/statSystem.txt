@@ -1,0 +1,262 @@
+MemTotal:        1982104 kB
+MemFree:         1627772 kB
+MemAvailable:    1691252 kB
+Buffers:           25524 kB
+Cached:           161896 kB
+SwapCached:            0 kB
+Active:           160920 kB
+Inactive:          42272 kB
+Active(anon):      16436 kB
+Inactive(anon):        0 kB
+Active(file):     144484 kB
+Inactive(file):    42272 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       2116596 kB
+SwapFree:        2116596 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:         15960 kB
+Mapped:            27728 kB
+Shmem:               688 kB
+KReclaimable:      16504 kB
+Slab:              58392 kB
+SReclaimable:      16504 kB
+SUnreclaim:        41888 kB
+KernelStack:        5248 kB
+PageTables:         1488 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     3107648 kB
+Committed_AS:      43192 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       24116 kB
+VmallocChunk:          0 kB
+Percpu:            49664 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      147328 kB
+DirectMap2M:     1949696 kB
+DirectMap1G:           0 kB
+top - 14:26:33 up 16:28,  0 users,  load average: 0,00, 0,00, 0,00
+Tâches: 200 total,   1 en cours, 199 en veille,   0 arrêté,   0 zombie
+%Cpu(s):  0,0 ut,  0,0 sy,  0,0 ni,100,0 id,  0,0 wa,  0,0 hi,  0,0 si,  0,0 st 
+MiB Mem :   1935,6 total,   1577,5 libr,    290,8 util,    205,2 tamp/cache     
+MiB Éch :   2067,0 total,   2067,0 libr,      0,0 util.   1644,8 dispo Mem 
+
+    PID UTIL.     PR  NI    VIRT    RES    SHR S  %CPU  %MEM    TEMPS+ COM.
+   6999 client    20   0   10496   5612   3520 R  10,0   0,3   0:00.01 top
+      1 root      20   0   23136  14064  10800 S   0,0   0,7   0:01.30 systemd
+      2 root      20   0       0      0      0 S   0,0   0,0   0:00.07 kthreadd
+      3 root      20   0       0      0      0 S   0,0   0,0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+      5 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+      6 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+      7 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+      8 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     11 root       0 -20       0      0      0 I   0,0   0,0   0:00.92 kworker+
+     12 root      20   0       0      0      0 I   0,0   0,0   0:00.01 kworker+
+     13 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     14 root      20   0       0      0      0 I   0,0   0,0   0:00.00 rcu_tas+
+     15 root      20   0       0      0      0 I   0,0   0,0   0:00.00 rcu_tas+
+     16 root      20   0       0      0      0 I   0,0   0,0   0:00.00 rcu_tas+
+     17 root      20   0       0      0      0 S   0,0   0,0   0:00.09 ksoftir+
+     18 root      20   0       0      0      0 I   0,0   0,0   0:01.81 rcu_pre+
+     19 root      20   0       0      0      0 S   0,0   0,0   0:00.00 rcu_exp+
+     20 root      20   0       0      0      0 S   0,0   0,0   0:00.00 rcu_exp+
+     21 root      rt   0       0      0      0 S   0,0   0,0   0:00.44 migrati+
+     22 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 idle_in+
+     23 root      20   0       0      0      0 S   0,0   0,0   0:00.00 cpuhp/0
+     24 root      20   0       0      0      0 S   0,0   0,0   0:00.00 cpuhp/1
+     25 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 idle_in+
+     26 root      rt   0       0      0      0 S   0,0   0,0   0:00.90 migrati+
+     27 root      20   0       0      0      0 S   0,0   0,0   0:00.05 ksoftir+
+     34 root      20   0       0      0      0 S   0,0   0,0   0:00.00 kdevtmp+
+     35 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     36 root      20   0       0      0      0 S   0,0   0,0   0:00.00 kauditd
+     37 root      20   0       0      0      0 S   0,0   0,0   0:00.06 khungta+
+     38 root      20   0       0      0      0 S   0,0   0,0   0:00.00 oom_rea+
+     41 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     42 root      20   0       0      0      0 S   0,0   0,0   0:02.88 kcompac+
+     43 root      25   5       0      0      0 S   0,0   0,0   0:00.00 ksmd
+     44 root      39  19       0      0      0 S   0,0   0,0   0:00.63 khugepa+
+     45 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     46 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     47 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     48 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/9-a+
+     50 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     51 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     52 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     53 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     54 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     55 root      20   0       0      0      0 S   0,0   0,0   0:00.00 kswapd0
+     63 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+     67 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/24-+
+     68 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/25-+
+     69 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/26-+
+     70 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/27-+
+     71 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/28-+
+     72 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/29-+
+     73 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/30-+
+     74 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/31-+
+     75 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/32-+
+     76 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/33-+
+     77 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/34-+
+     78 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/35-+
+     79 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/36-+
+     80 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/37-+
+     81 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/38-+
+     82 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/39-+
+     83 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/40-+
+     84 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/41-+
+     85 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/42-+
+     86 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/43-+
+     87 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/44-+
+     88 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/45-+
+     89 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/46-+
+     90 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/47-+
+     91 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/48-+
+     92 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/49-+
+     93 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/50-+
+     94 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/51-+
+     95 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/52-+
+     96 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/53-+
+     97 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/54-+
+     98 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/55-+
+     99 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    101 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    102 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    103 root      20   0       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    108 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    110 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    111 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    112 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    178 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    225 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    226 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    227 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    228 root      20   0       0      0      0 S   0,0   0,0   0:00.01 scsi_eh+
+    229 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    230 root      20   0       0      0      0 S   0,0   0,0   0:00.01 scsi_eh+
+    231 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    232 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    233 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    234 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    235 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    236 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    237 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    238 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    239 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    240 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    241 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    242 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    243 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    244 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    245 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    246 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    247 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    248 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    249 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    250 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    251 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    252 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    253 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    254 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    255 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    256 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    257 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    258 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    259 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    260 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    261 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    262 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    263 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    264 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    265 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    266 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    267 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    268 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    269 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    270 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    271 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    272 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    273 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    274 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    275 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    276 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    277 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    278 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    279 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    280 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    281 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    282 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    283 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    284 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    285 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    286 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    287 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    288 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    289 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    290 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    291 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    292 root      20   0       0      0      0 S   0,0   0,0   0:00.00 scsi_eh+
+    293 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    324 root       0 -20       0      0      0 I   0,0   0,0   0:00.93 kworker+
+    345 root      20   0       0      0      0 S   0,0   0,0   0:00.57 jbd2/sd+
+    346 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    373 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/57-+
+    374 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/58-+
+    375 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/59-+
+    377 root      -2   0       0      0      0 S   0,0   0,0   0:00.00 psimon
+    391 root      20   0   50904  17932  16684 S   0,0   0,9   0:01.33 systemd+
+    419 root      20   0   36368  11220   7980 S   0,0   0,6   0:00.27 systemd+
+    442 root      -2   0       0      0      0 S   0,0   0,0   0:00.00 psimon
+    482 root     -51   0       0      0      0 S   0,0   0,0   0:00.00 irq/16-+
+    483 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    546 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    617 root      20   0       0      0      0 I   0,0   0,0   0:01.47 kworker+
+    621 root      20   0       0      0      0 I   0,0   0,0   0:01.49 kworker+
+    663 root      20   0       0      0      0 S   0,0   0,0   0:00.69 jbd2/sd+
+    664 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    678 root      20   0    6856   2996   2748 S   0,0   0,2   0:00.38 cron
+    715 dhcpcd    20   0   10512   4312   3140 S   0,0   0,2   0:00.16 dhcpcd
+    716 root      20   0   10516   2692   1596 S   0,0   0,1   0:00.09 dhcpcd
+    717 dhcpcd    20   0   10492   2168   1160 S   0,0   0,1   0:00.00 dhcpcd
+    718 dhcpcd    20   0   10492   2168   1160 S   0,0   0,1   0:00.00 dhcpcd
+    723 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker+
+    733 dhcpcd    20   0   10516   2444   1348 S   0,0   0,1   0:00.00 dhcpcd
+    734 dhcpcd    20   0   10516   2320   1224 S   0,0   0,1   0:00.00 dhcpcd
+    754 dhcpcd    20   0   10516   2444   1348 S   0,0   0,1   0:00.00 dhcpcd
+    770 root      20   0    6712   3784   3272 S   0,0   0,2   0:00.01 login
+    771 root      20   0    8156   2704   2472 S   0,0   0,1   0:00.00 agetty
+    772 root      20   0    8156   2792   2556 S   0,0   0,1   0:00.00 agetty
+    773 root      20   0    8156   2652   2420 S   0,0   0,1   0:00.00 agetty
+    774 root      20   0    8156   2800   2568 S   0,0   0,1   0:00.01 agetty
+    775 root      20   0    8156   2652   2416 S   0,0   0,1   0:00.01 agetty
+    776 root      20   0   11768   7888   6676 S   0,0   0,4   0:00.00 sshd
+    803 client    20   0    9340   6260   3860 S   0,0   0,3   0:01.34 bash
+   5430 root      20   0       0      0      0 I   0,0   0,0   0:00.10 kworker+
+   5477 root      20   0       0      0      0 I   0,0   0,0   0:00.14 kworker+
+   5884 root      20   0       0      0      0 I   0,0   0,0   0:29.35 kworker+
+   6162 root      20   0       0      0      0 I   0,0   0,0   0:00.00 kworker+
+   6201 root      20   0       0      0      0 I   0,0   0,0   0:00.17 kworker+
+   6576 root      20   0       0      0      0 I   0,0   0,0   0:00.00 kworker+
+   6887 root      20   0       0      0      0 I   0,0   0,0   0:00.52 kworker+
+   6934 root      20   0       0      0      0 I   0,0   0,0   0:00.13 kworker+
+   6967 root      20   0       0      0      0 I   0,0   0,0   0:00.22 kworker+
+   6987 root      20   0       0      0      0 I   0,0   0,0   0:00.06 kworker+

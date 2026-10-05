@@ -1,0 +1,71 @@
+import paramiko
+import sys
+import os
+import pymysql
+import subprocess
+import datetime
+
+
+
+# argv[0] nom du script
+hostname = sys.argv[1]
+username = "monitor"
+key_filename="/home/client/.ssh/id_rsa"
+client = paramiko.client.SSHClient()
+client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+client.connect(hostname, username=username, key_filename=key_filename)
+#pour rentrer le mot de passe en interactif
+
+
+dateHour=datetime.datetime.today().strftime('%Y-%m-%d_%H:%M:%S')
+
+
+print(dateHour)
+
+connection = pymysql.connect(
+    host=hostname,
+    user="client",
+    password="clientpass",
+    database=None,
+    cursorclass=pymysql.cursors.DictCursor,
+)
+
+with connection:
+#connection.commit()
+    with connection.cursor() as cursor:
+        # Creation de la base si non présente
+        sql = "USE PSMM; "
+        cursor.execute(sql)
+        # ajout des données pour chaque lignes trouvées
+         #On enlève le : pour que le l'heure et supprimer la  virgule
+        # print("Ajout de "+acc_name)
+        sql = """SELECT * FROM logsTable;"""
+        cursor.execute(sql)
+        listLogs=cursor.fetchall() 
+        #print(type(listLogs))
+
+#listLogs=str(listLogs)
+#backupFormated="\n".join(listLogs)
+
+
+initial_count = 0
+dir = "."
+
+for path in os.listdir(dir):
+    if os.path.isfile(os.path.join(dir, path)):
+        print(os.path.basename(path).split)
+        initial_count += 1
+
+
+
+message ='je suis arrivé dans le fichier'
+
+file_name ='backup_'+dateHour
+
+res = subprocess.run(f'echo '+message+' >> '+file_name, shell=True)
+
+
+print(res.stdout)
+
+cursor.close()
+client.close()

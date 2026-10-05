@@ -67,9 +67,9 @@ if numFiles == 7:
     for path in os.listdir(dir):
      # Chemin complet du fichier (dossier + nom)
      myPath=os.path.join(dir, path)
-     # On ignore les éventuels sous-dossiers
+     # on regarde que les fichier 
      if os.path.isfile(myPath):
-         # On garde le fichier dont la date de modification est la plus ancienne
+         # garder le fichier dont la date de modification est la plus ancienne
          if os.path.getmtime(myPath)<minDateCreation:   
              minDateCreation=os.path.getmtime(myPath)
              minName=myPath
